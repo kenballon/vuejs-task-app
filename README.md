@@ -1,4 +1,4 @@
-# crash-course-basic-2
+# vuejs-task-tracker-app
 
 ## Project setup
 ```
