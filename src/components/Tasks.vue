@@ -1,5 +1,6 @@
 <template>
   <div class="card-wrapper">
+  <h3>Double click to set reminder on/off</h3>
     <div v-for="task in tasks" class="task-card-item">
       <Task
         @toggle-reminder="$emit('toggle-reminder', task.id)"

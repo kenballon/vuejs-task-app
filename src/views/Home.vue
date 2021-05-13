@@ -112,8 +112,10 @@ export default {
                 due_date: docObj.due_date,
                 reminder: docObj.reminder,
               };
-            }
-          });
+            }else{
+              return {...task}
+            }           
+          });          
         })
         .catch((error) => {
           console.log('Error getting document: ', error);

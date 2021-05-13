@@ -41,19 +41,10 @@ export default {
   props: {
     task: Object,
     titleHeader: String,
-  },
-  data() {
-    return {
-      showModal: true,
-      title: '',
-      due_date: '',
-      reminder: Boolean,
-    };
-  },
+  }, 
   methods: {    
     onSubmit(e) {
-      e.preventDefault();
-      this.showModal = false;
+      e.preventDefault();      
 
       const dateString = this.task.due_date; // change to timestamp so it can be save on firebase firestore
       const changedDate = dateString.replace(
@@ -70,14 +61,14 @@ export default {
         due_date: myTimestamp,
         reminder: this.task.reminder,
       };
-
-      // console.log(editTask);
+      
 
       this.$emit('edit-modal-task', editTask);
 
-      // this.title = '';
-      // this.due_date = '';
-      // this.reminder = false;
+      this.title = '';
+      this.due_date = '';
+      this.reminder = false;
+      
     },
   },
 };
