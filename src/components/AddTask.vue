@@ -33,9 +33,8 @@ export default {
         onSubmit(e){
             e.preventDefault();
 
-            const dateString = this.due_date; // change to timestamp so it can be save on firebase firestore             
-            const changedDate = dateString.replace(/(..)\/(..)\/(....) (..):(..)/, '$3-$2-$1 $4:$5');                        
-            const myTimestamp = firebase.firestore.Timestamp.fromDate(new Date(changedDate));            
+            const dateString = this.due_date; // change to timestamp so it can be save on firebase firestore                                               
+            const myTimestamp = firebase.firestore.Timestamp.fromDate(new Date(dateString));            
 
             if(!this.title){
                 alert('Please add a task')
