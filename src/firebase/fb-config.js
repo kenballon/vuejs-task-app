@@ -7,7 +7,7 @@ const firebaseConfig = {
     projectId: "vue-app-task-tracker",
     storageBucket: "vue-app-task-tracker.appspot.com",
     messagingSenderId: "807430124167",
-    appId: "1:807430124167:web:c211d0f07915f8e8adfe22"
+    appId: "1:807430124167:web:21bc2ddfd6eefe04adfe22"
 };
 
 // init firebase 
